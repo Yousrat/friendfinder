@@ -1,0 +1,31 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Matching Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yousrat/friendfinder.git"
+  },
+  "keywords": [
+    "matching",
+    "relationships",
+    "aplpication",
+    "node.js",
+    "html",
+    "express.js"
+  ],
+  "author": "Yousra Elbanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yousrat/friendfinder/issues"
+  },
+  "homepage": "https://github.com/Yousrat/friendfinder#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
