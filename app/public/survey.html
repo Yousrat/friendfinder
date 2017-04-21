@@ -208,7 +208,7 @@
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
 
-    
+    //var friends = require("../data/friends");
 
     $(".submit").on("click", function(event) {
       event.preventDefault();
@@ -221,18 +221,24 @@
       };
 
       console.log(newUser);
-
       
       $.post("/api/input", newUser,
         function(data) {
-
-          // If a table is available... tell user they are booked.
+                  //friends.push(newUser);
+// var sub=[];
+// var diff;
           if (data) {
-
-            alert("Yay! You are officially booked!");
+              // for (var i=0; i<newFriend.length(); i++){
+                  // for (var j=0; j<newUser.scores.length(); j++){
+                    // diff=abs(newUser.scores[j]- newFriend.scores[j]);
+                    // sub.push(diff);
+                  // }
+              // }
+              alert("checking your perfect match");
           }
+            //}
+            
 
-          // If a table is available... tell user they on the waiting list.
           else {
             alert("Sorry you are on the wait list");
           }
