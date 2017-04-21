@@ -35,24 +35,39 @@ module.exports = function(app) {
   // Then the server saves the data to the tableData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/friends", function(req, res) {
+  app.post("/api/input", function(req, res) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
-    
-      friends.push(req.body);
-      res.json(true);
+     var newFriend = req.body;
+     newFriend.name = newFriend.name.replace(/\s+/g, "").toLowerCase();
+      console.log(newFriend);
+            friends.push(newFriend);
+res.json(newFriend);
+      
+     // res.json(true);
     
   });
+
+//   app.post("/api/new", function(req, res) {
+//   var newcharacter = req.body;
+//   newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+
+//   console.log(newcharacter);
+
+//   characters.push(newcharacter);
+
+//   res.json(newcharacter);
+// });
 
   // ---------------------------------------------------------------------------
   // I added this below code so you could clear out the table while working with the functionality.
   // Don"t worry about it!
 
-  app.post("/api/clear", function() {
-    // Empty out the arrays of data
-    friends = [];
-    //waitListData = [];
+  // app.post("/api/clear", function() {
+  //   // Empty out the arrays of data
+  //   friends = [];
+  //   //waitListData = [];
 
-    console.log(friends);
-  });
+  //   console.log(friends);
+  // });
 };
